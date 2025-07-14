@@ -1,0 +1,14 @@
+.light,
+.dark {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+:root[data-mantine-color-scheme='light'] .light {
+  display: none;
+}
+
+:root[data-mantine-color-scheme='dark'] .dark {
+  display: none;
+} 

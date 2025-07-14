@@ -7,10 +7,17 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'],
   moduleNameMapper: {
-    '^@/components/(.*)$': '<rootDir>/components/$1',
-    '^@/pages/(.*)$': '<rootDir>/pages/$1',
+    '^@/(.*)$': '<rootDir>/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
   testEnvironment: 'jest-environment-jsdom',
 };
 
-module.exports = createJestConfig(customJestConfig);
+module.exports = {
+  testEnvironment: 'jest-environment-jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+  },
+};

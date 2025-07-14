@@ -1,4 +1,4 @@
-import { Anchor, Text, Title } from '@mantine/core';
+import { Text, Title } from '@mantine/core';
 import classes from './Welcome.module.css';
 
 export function Welcome() {
@@ -10,13 +10,18 @@ export function Welcome() {
           Mantine
         </Text>
       </Title>
-      <Text color="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
+      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
         This starter Next.js project includes a minimal setup for server side rendering, if you want
         to learn more on Mantine + Next.js integration follow{' '}
-        <Anchor href="https://mantine.dev/guides/next/" size="lg">
+        <Text
+          variant="gradient"
+          component="a"
+          href="https://mantine.dev/guides/next/"
+          gradient={{ from: 'pink', to: 'yellow' }}
+        >
           this guide
-        </Anchor>
-        . To get started edit index.tsx file.
+        </Text>
+        . To get started edit &lt;code&gt;pages/index.tsx&lt;/code&gt; file.
       </Text>
     </>
   );

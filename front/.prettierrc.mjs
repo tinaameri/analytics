@@ -2,6 +2,7 @@
 const config = {
   printWidth: 100,
   singleQuote: true,
+  "semi": true,
   trailingComma: 'es5',
   plugins: ['@ianvs/prettier-plugin-sort-imports'],
   importOrder: [
