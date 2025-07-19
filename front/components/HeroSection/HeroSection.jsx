@@ -1,11 +1,13 @@
 import React from 'react';
-import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import { Box, Grid } from '@mantine/core';
+import Image from 'next/image';
+import { Box, Center, Grid } from '@mantine/core';
 import { getBackground } from '../../lib/getBackground';
 import { CMS_BASE_URL } from '../../lib/strapi';
+import Button from '../Button/Button';
 import SectionLayout from '../Layout/SectionLayout';
 import MarkdownDisplay from '../MarkdownDisplay/MarkdownDisplay';
+
 const ColorSchemeToggle = dynamic(
   () => import('../ColorSchemeToggle/ColorSchemeToggle').then((mod) => mod.ColorSchemeToggle),
   {
@@ -21,13 +23,13 @@ export default function HeroSection({ sectionData }) {
       <Grid align="center">
         <Grid.Col span={{ base: 12, md: sectionData?.two_columns ? 6 : 12 }}>
           <MarkdownDisplay markdownContent={sectionData?.content} />
-          {/* {sectionData?.buttons && (
-            <Box mt="md">
-              {sectionData.buttons.map((button) => (
-                <Button key={button.id} {...button} />
-              ))}
-            </Box>
-          )} */}
+          {sectionData?.buttons && (
+            <Center mt="md" gap="md">
+              {sectionData.buttons.map((button) => {
+                return <Button key={button.id} {...button} variant={button.variant || 'filled'} />;
+              })}
+            </Center>
+          )}
         </Grid.Col>
         <Grid.Col span={{ base: 12, md: sectionData?.two_columns ? 6 : 12 }}>
           <Box w="100%" h="300px" pos="relative">

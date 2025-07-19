@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_page_element_buttons",
+  "info": {
+    "displayName": "Button",
+    "icon": "cursor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "filled",
+        "outline",
+        "light",
+        "white",
+        "default",
+        "subtle",
+        "gradient"
+      ],
+      "default": "filled"
+    },
+    "color": {
+      "type": "string"
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": ["xs", "sm", "md", "lg", "xl"],
+      "default": "md"
+    },
+    "radius": {
+      "type": "enumeration",
+      "enum": ["xs", "sm", "md", "lg", "xl"],
+      "default": "sm"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+} 

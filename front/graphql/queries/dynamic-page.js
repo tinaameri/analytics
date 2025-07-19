@@ -28,6 +28,17 @@ export async function getSinglePage(slug) {
               url
               alternativeText
             }
+            buttons {
+              label
+              href
+              icon
+              variant
+              color
+              image{
+                url
+                alternativeText
+              }
+            }
           }
         }
       }

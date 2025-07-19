@@ -1,3 +1,19 @@
 .markdown p {
   line-height: 1;
+}
+
+.markdown h1 {
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.markdown h2 {
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.markdown h3 {
+  font-size: 30px;
 } 

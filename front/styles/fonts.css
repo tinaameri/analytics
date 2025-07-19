@@ -1,31 +1,40 @@
 @font-face {
-    font-family: "IRANSans";
-    src: url("../public/assets/fonts/IRANSansXFaNum-Regular.woff2") format("woff2");
-    font-weight: 400;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "IRANSans";
-    src: url("../public/assets/fonts/IRANSansXFaNum-Medium.woff2") format("woff2");
-    font-weight: 500;
-    font-display: swap;
-  }
+  font-family: 'IRANSans';
+  src: url('../public/assets/fonts/IRANSansXFaNum-LightD4.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IRANSans';
+  src: url('../public/assets/fonts/IRANSansXFaNum-RegularD4.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IRANSans';
+  src: url('../public/assets/fonts/IRANSansXFaNum-MediumD4.woff2') format('woff');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IRANSans';
+  src: url('../public/assets/fonts/IRANSansXFaNum-DemiBoldD4.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
 
-    @font-face {
-        font-family: "IRANSans";
-        src: url("../public/assets/fonts/IRANSansXFaNum-Bold.woff2") format("woff2");
-        font-weight: 700;
-        font-display: swap;
-    }
+@font-face {
+  font-family: 'IRANSans';
+  src: url('../public/assets/fonts/IRANSansXFaNum-BoldD4.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
 
-    @font-face {
-        font-family: "IRANSansXVF";
-        src: url("../public/assets/fonts/IRANSansXVF.ttf") format("ttf");
-        font-weight: 900;
-        font-display: swap;
-    }
-    
-  
-  /* و به همین شکل سایر وزن‌ها */
-  
+@font-face {
+  font-family: 'IRANSans';
+  src: url('../public/assets/fonts/IRANSansXFaNum-ExtraBlackD4.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+}
+
+/* و به همین شکل سایر وزن‌ها */

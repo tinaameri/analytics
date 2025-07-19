@@ -8,11 +8,22 @@ export const theme = createTheme({
     lg: '74em',
     xl: '90em',
   },
-  fontFamily: 'IRANSansXVF, sans-serif',
+  fontFamily: 'IRANSans, sans-serif',
   lineHeight: '1.5',
   headings: {
-    fontFamily: 'IRANSansXVF, sans-serif',
-    fontWeight: '500',
+    fontFamily: 'IRANSans, sans-serif',
+    fontWeight: '900',
+    sizes: {
+      h1: {
+        fontSize: '60px',
+        lineHeight: '1.2',
+      },
+    },
+  },
+  primaryColor: 'primary',
+  colors: {
+    'primary': ['#005CB7', '#005CB7', '#005CB7', '#005CB7', '#005CB7', '#005CB7', '##005CB7', '#005CB7', '#005CB7', '#147885'],
+    //'blue': '#66ABEF',
   },
   components: {
     Text: {

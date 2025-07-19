@@ -6,41 +6,12 @@ export default function Document() {
     <Html lang="fa" dir="rtl">
       <Head>
         <ColorSchemeScript />
-        <link
-            rel="preload"
-            href="/assets/fonts/IRANSansXFaNum-Light.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/assets/fonts/IRANSansXFaNum-Medium.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />  
-          <link
-            rel="preload"
-            href="/assets/fonts/IRANSansXFaNum-Regular.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/assets/fonts/IRANSansXFaNum-Bold.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/assets/fonts/IRANSansXVF.ttf"
-            as="font"
-            type="font/ttf"
-            crossOrigin="anonymous"
-          />
+        <link rel="preload" href="/assets/fonts/IRANSansXFaNum-LightD4.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/assets/fonts/IRANSansXFaNum-MediumD4.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/assets/fonts/IRANSansXFaNum-RegularD4.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/assets/fonts/IRANSansXFaNum-BoldD4.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/assets/fonts/IRANSansXFaNum-ExtraBlackD4.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/assets/fonts/IRANSansXFaNum-DemiBoldD4.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </Head>
       <body>
         <Main />

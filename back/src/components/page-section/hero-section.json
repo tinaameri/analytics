@@ -18,15 +18,24 @@
     "content": {
       "type": "richtext"
     },
-
     "image": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "two_columns": {
       "type": "boolean",
       "default": false
+    },
+    "buttons": {
+      "type": "component",
+      "component": "page-element.button",
+      "repeatable": true
     }
   },
   "config": {}
