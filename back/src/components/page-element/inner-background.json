@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_page_element_inner_backgrounds",
+  "info": {
+    "displayName": "inner-background"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "color": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

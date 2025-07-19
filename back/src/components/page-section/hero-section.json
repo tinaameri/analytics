@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_page_section_hero_sections",
+  "info": {
+    "displayName": "hero-section"
+  },
+  "options": {},
+  "attributes": {
+    "inner_background": {
+      "type": "component",
+      "component": "page-element.inner-background",
+      "repeatable": false
+    },
+    "outer_background": {
+      "type": "component",
+      "component": "page-element.outer-background",
+      "repeatable": false
+    },
+    "content": {
+      "type": "richtext"
+    },
+
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files", "videos", "audios"]
+    },
+    "two_columns": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

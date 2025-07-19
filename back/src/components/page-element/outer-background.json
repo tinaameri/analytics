@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_page_element_outer_backgrounds",
+  "info": {
+    "displayName": "outer-background"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "color": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

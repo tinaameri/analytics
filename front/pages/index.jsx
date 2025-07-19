@@ -1,11 +1,19 @@
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
-import { Welcome } from '../components/Welcome/Welcome';
+import DynamicPage from '../components/DynamicPage';
+import { getSinglePage } from '../graphql/queries/dynamic-page';
 
-export default function HomePage() {
+export async function getStaticProps() {
+  const { pageData } = await getSinglePage('home');
+  return {
+    props: {
+      pageData: pageData || null,
+    },
+  };
+}
+export default function HomePage({ pageData }) {
+  console.log('pageData-home', pageData);
   return (
     <>
-      <Welcome />
-      <ColorSchemeToggle />
+      <DynamicPage pageData={pageData} />
     </>
   );
 }
