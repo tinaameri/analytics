@@ -394,7 +394,7 @@ export interface ApiDynamicPageDynamicPage extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     page_dynamic_sections: Schema.Attribute.DynamicZone<
-      ['page-section.hero-section']
+      ['page-section.hero-section', 'page-section.feature-carousel']
     >;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;

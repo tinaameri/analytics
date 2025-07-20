@@ -24,6 +24,23 @@ export interface PageElementButton extends Struct.ComponentSchema {
   };
 }
 
+export interface PageElementCarousel extends Struct.ComponentSchema {
+  collectionName: 'components_page_element_carousels';
+  info: {
+    displayName: 'Carousel';
+  };
+  attributes: {
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface PageElementInnerBackground extends Struct.ComponentSchema {
   collectionName: 'components_page_element_inner_backgrounds';
   info: {
@@ -43,6 +60,23 @@ export interface PageElementOuterBackground extends Struct.ComponentSchema {
   attributes: {
     color: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface PageSectionFeatureCarousel extends Struct.ComponentSchema {
+  collectionName: 'components_page_section_feature_carousels';
+  info: {
+    displayName: 'feature-carousel';
+  };
+  attributes: {
+    features: Schema.Attribute.Component<'page-element.carousel', true>;
+    info: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
   };
 }
 
@@ -85,8 +119,10 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'page-element.button': PageElementButton;
+      'page-element.carousel': PageElementCarousel;
       'page-element.inner-background': PageElementInnerBackground;
       'page-element.outer-background': PageElementOuterBackground;
+      'page-section.feature-carousel': PageSectionFeatureCarousel;
       'page-section.hero-section': PageSectionHeroSection;
       'shared.seo': SharedSeo;
     }

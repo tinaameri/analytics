@@ -1,0 +1,33 @@
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.title {
+  font-weight: 900;
+  margin-top: var(--mantine-spacing-md);
+}
+
+.description {
+  color: var(--mantine-color-gray-5);
+  margin-top: var(--mantine-spacing-xs);
+}
+
+.content{
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+    padding: var(--mantine-spacing-xs);
+    background-color: #FFFFFF4D;
+    border-radius: 15px;
+    color: var(--mantine-color-gray-1);
+    backdrop-filter: blur(24px);
+}

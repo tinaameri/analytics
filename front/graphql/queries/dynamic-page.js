@@ -34,7 +34,18 @@ export async function getSinglePage(slug) {
               icon
               variant
               color
-              image{
+              image {
+                url
+                alternativeText
+              }
+            }
+          }
+          ... on ComponentPageSectionFeatureCarousel {
+            id
+            info
+            features {
+              content
+              image {
                 url
                 alternativeText
               }
@@ -47,5 +58,5 @@ export async function getSinglePage(slug) {
   const response = await strapiClient?.request(DYNAMIC_PAGE_QUERY, {
     slug,
   });
-  return {pageData: response.dynamicPages[0]|| null};
+  return { pageData: response.dynamicPages[0] || null };
 }

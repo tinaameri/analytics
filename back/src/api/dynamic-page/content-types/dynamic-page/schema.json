@@ -21,7 +21,8 @@
     "page_dynamic_sections": {
       "type": "dynamiczone",
       "components": [
-        "page-section.hero-section"
+        "page-section.hero-section",
+        "page-section.feature-carousel"
       ]
     }
   }

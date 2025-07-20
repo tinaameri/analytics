@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_page_section_feature_carousels",
+  "info": {
+    "displayName": "feature-carousel"
+  },
+  "options": {},
+  "attributes": {
+    "info": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "features": {
+      "type": "component",
+      "component": "page-element.carousel",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,3 +1,4 @@
+import path from 'node:path';
 import bundleAnalyzer from '@next/bundle-analyzer';
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -6,6 +7,10 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 export default withBundleAnalyzer({
   reactStrictMode: false,
+  sassOptions: {
+    implementation: 'sass-embedded',
+    additionalData: `@use "${path.join(process.cwd(), '_mantine').replace(/\\/g, '/')}" as mantine;`,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },

@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { Box, Center, Grid } from '@mantine/core';
+import { AspectRatio, Box, Center, Grid } from '@mantine/core';
 import { getBackground } from '../../lib/getBackground';
 import { CMS_BASE_URL } from '../../lib/strapi';
 import Button from '../Button/Button';
@@ -24,20 +24,23 @@ export default function HeroSection({ sectionData }) {
         <Grid.Col span={{ base: 12, md: sectionData?.two_columns ? 6 : 12 }}>
           <MarkdownDisplay markdownContent={sectionData?.content} />
           {sectionData?.buttons && (
-            <Center mt="md" gap="md">
+            <Center mt="xl" gap="md">
               {sectionData.buttons.map((button) => {
                 return <Button key={button.id} {...button} variant={button.variant || 'filled'} />;
               })}
             </Center>
           )}
         </Grid.Col>
-        <Grid.Col span={{ base: 12, md: sectionData?.two_columns ? 6 : 12 }}>
+        <Grid.Col mt={sectionData?.two_columns ? '0' : 'xl'} span={{ base: 12, md: sectionData?.two_columns ? 6 : 12 }}>
           <Box w="100%" h="300px" pos="relative">
-            <Image
-              src={`${CMS_BASE_URL}${sectionData?.image?.url}`}
-              fill
-              alt={sectionData?.outer_background?.image?.alt || ''}
-            />
+            <AspectRatio ratio={16 / 9}>
+              <Image
+                priority
+                src={`${CMS_BASE_URL}${sectionData?.image?.url}`}
+                fill
+                alt={sectionData?.outer_background?.image?.alt || ''}
+              />
+            </AspectRatio>
           </Box>
         </Grid.Col>
       </Grid>
