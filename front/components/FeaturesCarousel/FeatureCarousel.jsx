@@ -1,6 +1,8 @@
+import { useRef } from 'react';
 import classes from './FeaturesCarousel.module.scss';
+import Autoplay from 'embla-carousel-autoplay';
 import { Carousel } from '@mantine/carousel';
-import { Box, Card, Image, Text, Title } from '@mantine/core';
+import { Box, Card, Image } from '@mantine/core';
 
 import '@mantine/carousel/styles.css';
 
@@ -8,7 +10,7 @@ import { IMAGES_BASE_URL } from '../../lib/strapi';
 import SectionLayout from '../Layout/SectionLayout';
 import MarkdownDisplay from '../MarkdownDisplay/MarkdownDisplay';
 
-function FeatureCard({ image, title, description, content }) {
+function FeatureCard({ image, title, content }) {
   return (
     <Card
       shadow="sm"
@@ -42,6 +44,7 @@ export function FeaturesCarousel({ features }) {
       <FeatureCard image={IMAGES_BASE_URL + feature.image.url} content={feature.content} />
     </Carousel.Slide>
   ));
+  const autoplay = useRef(Autoplay({ delay: 2000 }));
   console.log(features.features, 'features----------');
   return (
     //     <Carousel
@@ -65,14 +68,21 @@ export function FeaturesCarousel({ features }) {
         <MarkdownDisplay markdownContent={features?.info} />
       </SectionLayout>
       <Carousel
-        slideSize={{ base: '100%', sm: '50%', md: '33.333333%', lg: '29%' }}
+        plugins={[autoplay.current]}
+        onMouseEnter={autoplay.current.stop}
+        onMouseLeave={() => autoplay.current.play()}
+        slideSize={{ base: '70%', sm: '50%', md: '33.333333%', lg: '29%' }}
         slideGap={{ base: 0, sm: 'md' }}
-        loop
+        emblaOptions={{
+          loop: true,
+          dragFree: false,
+          align: 'start',
+        }}
         align="start"
         slidesToScroll={1}
         withIndicators
         height="100%"
-        pr={{ xs: 0, sm: 0, md: 110 }}
+        pr={{ xs: 10, sm: 10, md: 10, lg: 100 }}
         pb={100}
 
         //   slideSize="70%"

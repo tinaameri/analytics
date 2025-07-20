@@ -1,8 +1,10 @@
 import '@mantine/core/styles.css';
 import '../styles/fonts.css';
-import Head from 'next/head';
-import { ThemeProviders } from '../components/Providers/ThemeProviders';
 
+import Head from 'next/head';
+import { AppShell, ScrollArea } from '@mantine/core';
+import { ThemeProviders } from '../components/Providers/ThemeProviders';
+import Footer from '../components/Layout/footer/Footer';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -16,7 +18,18 @@ export default function App({ Component, pageProps }) {
           />
           <link rel="shortcut icon" href="/favicon.svg" />
         </Head>
-        <Component {...pageProps} />
+        <AppShell>
+          {/* <AppShell.Header></AppShell.Header> */}
+
+          <AppShell.Main>
+            <Component {...pageProps} />
+          </AppShell.Main>
+          <AppShell.Footer>
+            <AppShell.Section>
+              <Footer />
+            </AppShell.Section>
+          </AppShell.Footer>
+        </AppShell>
       </ThemeProviders>
     </>
   );

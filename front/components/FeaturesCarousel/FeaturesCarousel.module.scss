@@ -19,15 +19,15 @@
   margin-top: var(--mantine-spacing-xs);
 }
 
-.content{
+.content {
   position: absolute;
   bottom: 20px;
   left: 5%;
   right: 5%;
   width: 90%;
-    padding: var(--mantine-spacing-xs);
-    background-color: #FFFFFF4D;
-    border-radius: 15px;
-    color: var(--mantine-color-gray-1);
-    backdrop-filter: blur(24px);
+  padding: var(--mantine-spacing-xs);
+  border: 1px solid #FFFFFF4D;
+  border-radius: 15px;
+  color: white;
+  backdrop-filter: blur(24px);
 }

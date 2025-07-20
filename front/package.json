@@ -27,6 +27,7 @@
     "@next/bundle-analyzer": "^15.3.3",
     "@tabler/icons-react": "^3.34.0",
     "embla-carousel": "^8.5.2",
+    "embla-carousel-autoplay": "^8.5.2",
     "embla-carousel-react": "^8.5.2",
     "graphql": "^16.11.0",
     "graphql-request": "^7.2.0",
